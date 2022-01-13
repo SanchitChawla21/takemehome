@@ -1,0 +1,32 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  background-color: white;
+  padding: 10px;
+  grid-template-areas:
+  "options options"
+  "matrix steps"
+}
+
+.options{
+ grid-area: options;
+ margin-bottom: 10px;
+}
+
+.steps{
+  grid-area: steps;
+}
+
+.matrix{
+  grid-area: matrix;
+}
+
+.code{
+  grid-area: code;
+}
+
+.margin{
+  margin-left: 10px;
+}
+
+

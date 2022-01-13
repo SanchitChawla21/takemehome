@@ -1,0 +1,56 @@
+
+
+<p>
+  <mat-toolbar color="primary">
+    <span>'Shortest Path Finding Game By Sanchit' </span>
+  </mat-toolbar>
+</p>
+
+<div class= "grid-container">
+<div class="steps">
+  <p>
+    Welcome!! Steps to Play: -
+    <li>Please select the 'Start & End' location by clicking on any cell.</li>
+    <li>
+      Drop down will open with three options - 'Start' , 'End' , 'Block', select
+      option accordingly.
+    </li>
+    <li>
+      Once done, please click on 'Find Path' Button. you will get shortest path
+      in 'Green' color.
+    </li>
+    <li>Error message will appear if 'No Path' available.</li>
+    <li>Click on 'Reset' button to play again--Enjoy!!</li>
+  </p>
+</div>
+
+<div class="options">
+<button mat-raised-button color="primary" (click)="findPath()">
+  Find Path
+</button>
+<button class="margin"  mat-raised-button (click)="Reset()">Reset</button>
+</div>
+
+<div class="matrix">
+<ag-grid-angular
+  #agGrid
+  style="width: 800px; height: 600px"
+  class="ag-theme-alpine"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [singleClickEdit]="true"
+  [animateRows]="true"
+  [getRowNodeId]="getRowNodeId"
+  (gridReady)="onGridReady($event)"
+  (cellValueChanged)="onCellValueChanged($event)"
+>
+</ag-grid-angular>
+
+</div>
+
+<div class="code">
+
+</div>
+
+</div>
